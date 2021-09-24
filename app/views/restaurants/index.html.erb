@@ -1,18 +1,18 @@
 <%@restaurants.each do |restaurant|%>
 
-<table>
- <tr>
-  <th> Restaurant Name</th>
-  <th>Restaurant Description </th>
- </tr>
- <tr>
-    <td><%= link_to restaurant.name, restaurant_path(restaurant)%></td>
-    <td><%= link_to restaurant.description, restaurant_path(restaurant)%></td>
-    <td><%= link_to restaurant.city, restaurant_path(restaurant)%></td>
-    <td><%= link_to restaurant.star_rating, restaurant_path(restaurant)%></td>
-    <td><%= link_to restaurant.cuisine, restaurant_path(restaurant)%></td>
-
-  </tr>  
-</table>
-<%= link_to "Delete", restaurant, method: :delete, data: { confirm: "Really?" } %> 
-<%end %>
+  <table>
+   <tr>
+    <th> Restaurant Name</th>
+    <th>Restaurant Description </th>
+   </tr>
+   <tr>
+      <td><%= link_to restaurant.name, restaurant_path(restaurant)%></td>
+      <td><%= link_to restaurant.description, restaurant_path(restaurant)%></td>
+      <td><%= link_to restaurant.city, restaurant_path(restaurant)%></td>
+      <td><%= link_to restaurant.star_rating, restaurant_path(restaurant)%></td>
+      <td><%= link_to restaurant.cuisine, restaurant_path(restaurant)%></td>
+  
+    </tr>  
+  </table>
+  <%= link_to "Delete", restaurant, method: :delete, data: { confirm: "Really?" } %> 
+  <%end %>
